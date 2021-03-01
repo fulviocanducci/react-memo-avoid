@@ -11,7 +11,7 @@ function Post() {
       .catch((error) => console.log(error));
   }, []);
   const handleAdd = useCallback(() => {
-    setPosts((state) => [...state, { title: value }]);
+    setPosts((state) => [{ title: value }, ...state]);
   }, [value]);
   return (
     <div>
